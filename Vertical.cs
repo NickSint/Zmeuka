@@ -6,21 +6,20 @@ using System.Threading.Tasks;
 
 namespace Zmeuka
 {
-    class Horizontal : Figure
+    class Vertical : Figure
     {
-       
+        
 
-        public Horizontal(int xLeft , int xReight, int y, char sym)//конструктор, передаем параметры
+        public Vertical(int yUp, int yDown, int x, char sym)//конструктор, передаем параметры
         {
             pList = new List<Point>();
-            for (int x = xLeft; x < xReight; x++)
+            for (int y = yUp; y <=  yDown; y++)
             {
                 Point p = new Point(x, y, sym); // создаеи точку
                 pList.Add(p);
             }
         }
 
-       
 
     }
 }
